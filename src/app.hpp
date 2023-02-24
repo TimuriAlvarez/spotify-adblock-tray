@@ -7,6 +7,7 @@
 #include "window.hpp"
 
 #define DEFAULT_CLIENT_APP_PATH "spotify"
+#define DEFAULT_CLIENT_LD_PRELOAD "LD_PRELOAD=/usr/lib/spotify-adblock.so"
 #define CLIENT_FIND_ATTEMPTS 5
 
 class SpotifyTrayApp : public QApplication {

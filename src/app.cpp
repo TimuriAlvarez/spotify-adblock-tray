@@ -62,6 +62,12 @@ SpotifyTrayApp::~SpotifyTrayApp() {
 // spawn a new process using the args if the window is not found
 // at the first attempt.
 WindowData SpotifyTrayApp::startSpotify(const QStringList& args) {
+    // Before launching Spotify application
+    // Setting 'LD_PRELOAD' environment variable
+    // is essential for AdBlock to function properly
+    const auto env_good = putenv((char* const)DEFAULT_CLIENT_LD_PRELOAD) == 0;
+    qDebug("%s set LD_PRELOAD environment variable to start Spotify with an AdBlocker", env_good ? "Successfully" : "Failed to");
+
     spotifyProcess.start(DEFAULT_CLIENT_APP_PATH, args, QIODevice::ReadOnly);
 
     // App launched, it double forks; need to find the window and PID

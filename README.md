@@ -1,13 +1,19 @@
-# Yet Another Spotify Tray
+# Spotify AdBlock Tray
 
 This application should not exist. Spotify should have this feature automatically.
-This application adds a tray icon to the Spotify Linux client application.
+This application adds a tray icon to the Spotify Linux client application
+
+Patched version for spotify-adblock (AUR), tested on Manjaro KDE.
 
 ## Features
 
 * Launches Spotify minimized to the system tray.
 
 * Provides basic playback control through right-click menu.
+
+* Enables adblock using spotify-adblock (AUR).
+
+* Provides simple build and installation process.
 
 ## Installation
 
@@ -16,16 +22,19 @@ This application adds a tray icon to the Spotify Linux client application.
 * Build the application:
 
   ```
-  mkdir build
-  cd build
-  cmake -DCMAKE_BUILD_TYPE=Release ..
-  make
+  make build
   ```
 
 * Install the application:
 
   ```
-  sudo make install
+  make install
+  ```
+
+* Uninstall the application:
+
+  ```
+  make uninstall
   ```
 
 ## Dependencies
