@@ -1,9 +1,8 @@
 # Spotify AdBlock Tray
 
-This application should not exist. Spotify should have this feature automatically.
-This application adds a tray icon to the Spotify Linux client application
-
 Patched version for spotify-adblock (AUR), tested on Manjaro KDE.
+
+## Update: Since devs finally returned the functionallity there is no need in this app
 
 ## Features
 
